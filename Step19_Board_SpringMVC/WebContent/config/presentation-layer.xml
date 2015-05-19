@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+	<bean id="login" class="com.samsung.view.user.LoginController"></bean>
+	<bean id = "logout" class="com.samsung.view.user.LogoutController"></bean>
+	<bean id="addBoard" class="com.samsung.view.board.AddBoardController"></bean>
+	<bean id="updateBoard" class="com.samsung.view.board.UpdateBoardController"></bean>
+	<bean id="deleteBoard" class="com.samsung.view.board.DeleteBoardController"></bean>
+	<bean id="getBoard" class="com.samsung.view.board.GetBoardController"></bean>
+	<bean id="getBoardList" class="com.samsung.view.board.GetBoardListController"></bean>
+	
+	<bean id="handlerMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/login.do">login</prop>
+				<prop key="/logout.do">logout</prop>
+				<prop key="/addBoard.do">addBoard</prop>
+				<prop key="/updateBoard.do">updateBoard</prop>
+				<prop key="/deleteBoard.do">deleteBoard</prop>
+				<prop key="/getBoard.do">getBoard</prop>
+				<prop key="/getBoardList.do">getBoardList</prop>
+			</props>
+		</property>
+	</bean>
+</beans>
+
+
+
+
+
+
+
+
+
+
+
